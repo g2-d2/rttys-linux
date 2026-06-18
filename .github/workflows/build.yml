@@ -20,7 +20,12 @@ jobs:
           mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
           cp rttys-linux.spec ~/rpmbuild/SPECS/
 
-          tar czf rttys-linux-1.0.tar.gz app rttys.service
+          mkdir rttys-linux-1.0
+          cp -r app rttys-linux-1.0/
+          cp rttys.service rttys-linux-1.0/
+          
+          tar czf rttys-linux-1.0.tar.gz rttys-linux-1.0
+
           mv rttys-linux-1.0.tar.gz ~/rpmbuild/SOURCES/
 
       - name: Build RPM
