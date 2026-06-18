@@ -31,4 +31,5 @@ systemctl enable rttys
 systemctl daemon-reload
 
 %changelog
-* 2026 Initial release
+* Wed Jun 17 2026 Georgios Demelis <your@email.com> - 1.0-1
+- Initial release
