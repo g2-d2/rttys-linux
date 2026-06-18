@@ -1,0 +1,10 @@
+[Unit]
+Description=RTTY Server (Linux)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/rttys-linux/app/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
