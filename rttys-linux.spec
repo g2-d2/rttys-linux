@@ -1,16 +1,22 @@
 Name:           rttys-linux
 Version:        1.0
 Release:        1%{?dist}
-Summary:        RTTY TCP + WebUI server (no SDR)
+Summary:        RTTY TCP + WebUI server
 
 License:        MIT
+Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 
 Requires:       python3, python3-flask, nc
 
 %description
 RTTY server similar to rttys-windows.
-Provides TCP stream on 5912 and Web UI on 5913.
+
+%prep
+%setup -q
+
+%build
+# nothing
 
 %install
 mkdir -p %{buildroot}/opt/rttys-linux/app
